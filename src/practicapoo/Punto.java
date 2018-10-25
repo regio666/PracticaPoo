@@ -66,5 +66,17 @@ public class Punto {
 		return area;		
 	}
 	
+	public static void ImprimePunto(Punto punto1) {
+		System.out.print("(" +punto1.getX()+","+punto1.getY()+")");		
+	}
+	
+	public void ImprimePuntoIn() {
+		System.out.print("(" +this.x+","+this.y+")");		
+	}
+	
+	public void ImprimePuntoToString(Punto punto1, Punto punto2) {
+		System.out.print("(" +punto1.toString()+","+punto2.toString()+")");		
+	}
+	
 	
 }
