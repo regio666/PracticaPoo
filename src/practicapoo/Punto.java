@@ -59,24 +59,29 @@ public class Punto {
         return distancia;
     }
 	
-	public static double areaTriangulo(Punto punto1, Punto punto2, Punto punto3) {
+	public static double areaTriangulo(Punto punto1, Punto punto2, double punto3) {
 		double area=0;
-		double p=(punto1.getX()+punto2.getY()+punto3.getX())/2;
-		area=Math.sqrt(p*(p-punto1.getX())*(p-punto2.getY())*(p-punto3.getX()));
+		double hipotenusa;
+		punto3=Math.sqrt(punto1.getX()*punto1.getX()+punto2.getY()*punto2.getY());
+		double p=(punto1.getX()+punto2.getY()+punto3)/2;
+		area=Math.sqrt(p*(p-punto1.getX())*(p-punto2.getY())*(p-punto3));
 		return area;		
 	}
 	
 	public static void ImprimePunto(Punto punto1) {
-		System.out.print("(" +punto1.getX()+","+punto1.getY()+")");		
+		System.out.print("(" +punto1.getX()+","+punto1.getY()+")"+"\n");		
 	}
 	
 	public void ImprimePuntoIn() {
 		System.out.print("(" +this.x+","+this.y+")");		
 	}
 	
-	public void ImprimePuntoToString(Punto punto1, Punto punto2) {
-		System.out.print("(" +punto1.toString()+","+punto2.toString()+")");		
+	public void ImprimePuntoToString() {
+		System.out.print("(" +String.valueOf(this.x)+","+String.valueOf(this.y)+")");		
 	}
 	
+	public static void ImprimeArea(Punto punto1, Punto punto2, double punto3) {
+		System.out.print(Punto.areaTriangulo(punto1, punto2, punto3));
+	}
 	
 }
