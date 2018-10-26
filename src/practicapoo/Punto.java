@@ -4,13 +4,13 @@ public class Punto {
 	
 	private double x;
 	private double y;
-	private int Npuntos;
+	static int Npuntos;
 	
 	public Punto() {
 		
 	this.x=0;
 	this.y=0;
-	this.Npuntos++;
+	Npuntos++;
 		
 	}
 	
@@ -18,14 +18,14 @@ public class Punto {
 	
 		this.x=punto1;
 		this.y=punto2;
-		this.Npuntos++;
+		Npuntos++;
 		
 	}
 	
 	public Punto(Punto puntos) { 
 		this.x=puntos.x;
 		this.y=puntos.y;
-		this.Npuntos++;
+		Npuntos++;
 	}
 	
 	public void setX(double puntoX) {
